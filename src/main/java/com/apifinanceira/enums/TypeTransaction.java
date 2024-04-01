@@ -5,23 +5,23 @@ public enum TypeTransaction {
 	RECEITA(2);
 	
 	
-	private int code;
+	private int type;
 	
 	
-    public int getCode() {
-        return code;
+    public int getType() {
+        return type;
     }
 
-	private TypeTransaction(int code) {
-		this.code = code;
+	private TypeTransaction(int type) {
+		this.type = type;
 	}
 	
-    public static TypeTransaction valueOf(int code) {
+    public static TypeTransaction valueOf(int type) {
         for(TypeTransaction value : TypeTransaction.values()) {
-            if(value.getCode() == code) {
+            if(value.getType() == type) {
                 return value;
             }
         }
-        throw new IllegalArgumentException("Invalid OrderStatus Code");
+        throw new IllegalArgumentException("Invalid TypeTransaction Code");
     }
 }
